@@ -1,5 +1,3 @@
-# rRNA_gtfs
-GTF files of rRNA repeats
 ## Background
 In some common genome annotation GTF/GFF files, rRNA repeats are not properly marked. A detailed description/discussion of this problem can be seen [here](http://seqanswers.com/forums/showthread.php?t=41868). This can cause ineffective identification/filtering of rRNA reads in RNA-seq studies. To address this problem, a set of GTF files obtained from [UCSC table browser](https://genome.ucsc.edu/cgi-bin/hgTables) and modified versions of them are hosted in this repo to assist rRNA-related quality-check steps in RNA-seq data analysis pipelines.
 ## Source
