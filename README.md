@@ -19,7 +19,7 @@ featureCounts -a GRCh38_original.gtf -g gene_biotype -M -O --fraction -p -o samp
 ## Test results
 Test was done using two RNA-seq samples, one with rRNA depeltion, and one without. The FASTQ files were analyzed using a modified version of [nf-core/rnaseq](https://github.com/nf-core/rnaseq) pipeline version 1.4.2 using GRCh38 as reference. The analysis were done three times.
 1. With original featureCounts code, almost no rRNA was detected.
-![original result](/imgae/original.jpg)
+![original result](/image/original.jpg)
 2. With `-M -O --fraction` options, a little bit of rRNA was detected, but still very low.
 ![without rRNA GTF](/image/without_rRNA_gtf.jpg)
 3. with both rRNA GTF file and `-M -O --fraction`, rRNA was detected correctly (close to expectations).
