@@ -16,7 +16,7 @@ There are many ways to use these files, of course. One way that I have tested an
 Optionally, you can choose to add `-t gene` to the `featureCounts` command. This will ask `featureCounts` to count reads overlapping with genes instead of exons. Counting only reads overlapping exons will result in bias against protein coding genes because they may have reads overlapping introns, which won't be counted, while other biotypes such as rRNA have little or no introns. This bias is stronger in samples with more pre-mRNA.
 ```bash
 cat GRCh38.gtf >> GRCh38_original.gtf
-featureCounts -a GRCh38_original.gtf -t gene -g gene_biotype -M -O --fraction -p -o sample_biotype.featureCounts.txt -s 0 sample.bam
+featureCounts -a GRCh38_original.gtf -g gene_biotype -M -O --fraction -p -o sample_biotype.featureCounts.txt -s 0 sample.bam
 ```
 ## Test results
 Test was done using two RNA-seq samples, one with rRNA depeltion, and one without. The FASTQ files were analyzed using a modified version of [nf-core/rnaseq](https://github.com/nf-core/rnaseq) pipeline version 1.4.2 using GRCh38 as reference. The analysis were done three times.
